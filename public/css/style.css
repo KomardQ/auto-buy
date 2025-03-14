@@ -1,0 +1,157 @@
+body {
+  background-color: #1E1E1E;
+}
+
+/* Шапка */
+.header {
+  position: relative;
+  background-color: rgba(232, 232, 232, 0.1); /* Цвет из Figma */
+  margin-top: 20px;
+  padding: 24px 0;
+  border-radius: 60px; /* Закругленные углы */
+  color: #fff;
+
+}
+
+/* SVG-бордер */
+.header .header-border {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Чтобы не мешал интеракции */
+}
+
+.header .container {
+  max-width: 1920px; /* Максимальная ширина */
+  margin: 0 auto;
+  padding: 0 60px;
+
+}
+
+.header-text {
+  font-size: 20px; /* Montserrat 24 Regular */
+  font-family: 'Montserrat', sans-serif;
+  line-height: 24px;
+  font-weight: 200;
+}
+
+.header-text-line {
+  margin: 0;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo .logo {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.header-logo .logo-text {
+  font-size: 24px; /* Bebas Neue 36 */
+  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Правая часть шапки */
+.header .col-md-4.text-end {
+  display: flex;
+  justify-content: flex-end; /* Выравниваем контент по правому краю */
+  align-items: center;
+  padding-right: 20px; /* Уберите или уменьшите, если нужно */
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.contact-info {
+  text-align: right;
+}
+
+.contact-text {
+  font-size: 16px;
+  margin: 0;
+}
+
+.contact-number {
+  font-size: 32px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 4px;
+}
+
+/* Адаптивность */
+@media (max-width: 1800px) {
+  .header .header-border {
+    max-width: 100%;
+  }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+  .header .container {
+    padding: 10px;
+  }
+
+  .header-text {
+    font-size: 16px;
+  }
+
+  .header-logo .logo {
+    width: 80px;
+  }
+
+  .header-logo .logo-text {
+    font-size: 20px;
+  }
+
+  .header-logo .online-status {
+    font-size: 20px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .social-icon {
+    margin-bottom: 10px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .contact-info {
+    text-align: right;
+  }
+
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .contact-number {
+    font-size: 16px;
+  }
+}
