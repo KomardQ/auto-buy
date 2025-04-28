@@ -1,16 +1,58 @@
 body {
-  background-color: #1E1E1E;
+  background-color: #0C0C0C;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Глобальные настройки контейнера */
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 60px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Шапка */
 .header {
   position: relative;
   background-color: rgba(232, 232, 232, 0.1); /* Цвет из Figma */
-  margin-top: 20px;
-  padding: 24px 0;
+  margin: 20px auto 0;
+  padding: 24px 50px;
   border-radius: 60px; /* Закругленные углы */
   color: #fff;
+  max-width: 1920px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Для поддержки в Safari */
+}
 
+.background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.background-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Основные секции */
+.calculator-section,
+.gallery-section {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Подвал */
+.footer {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* SVG-бордер */
@@ -153,5 +195,9 @@ body {
 
   .contact-number {
     font-size: 16px;
+  }
+
+  .container {
+    padding: 0 20px;
   }
 }
