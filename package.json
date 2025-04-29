@@ -1,0 +1,30 @@
+{
+  "name": "auto-buy",
+  "version": "1.0.0",
+  "description": "## Описание Этот проект представляет собой сайт для авто-выкупа. На сайте можно оценить автомобиль, оставить заявку и узнать больше о процессе выкупа.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KomardQ/auto-buy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KomardQ/auto-buy/issues"
+  },
+  "homepage": "https://github.com/KomardQ/auto-buy#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

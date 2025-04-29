@@ -68,36 +68,211 @@
 
     <!-- Основной контент -->
     <main>
-      <!-- Калькулятор -->
-      <section id="calculator" class="calculator-section py-5">
-        <h2 class="text-center mb-4">Оцените авто за 2 минуты</h2>
-        <form id="valuation-form" class="row g-3">
-          <div class="col-md-6">
-            <label for="brand" class="form-label">Марка:</label>
-            <input type="text" class="form-control" id="brand" required>
+      <!-- Баннер -->
+      <section id="banner" class="banner-section">
+        <div class="banner-content">
+          <h1 class="banner-title">Выкуп автомобилей <br> в санкт-петербурге и ло</h1>
+          <div class="banner-subtitle">
+            <img src="images/loading-dots.png" alt="Загрузка" class="loading-dots">
+            <p>Узнайте, за сколько мы можем <br> выкупить ваш авто - оставьте заявку <br> на оценку стоимости</p>
           </div>
-          <div class="col-md-6">
-            <label for="year" class="form-label">Год выпуска:</label>
-            <input type="number" class="form-control" id="year" required>
+          <div class="banner-actions">
+            <button class="btn-price">Узнать цену выкупа</button>
+            <div class="banner-stats">
+              <div class="stat-item">
+                <span class="stat-label">до</span>
+                <span class="stat-value">98%</span>
+                <span class="stat-text">от рыночной стоимости</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">от</span>
+                <span class="stat-value">30</span>
+                <span class="stat-text">минут, и деньги у вас</span>
+              </div>
+            </div>
           </div>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary">Получить оценку</button>
-          </div>
-        </form>
+        </div>
       </section>
 
-      <!-- Галерея -->
-      <section id="gallery" class="gallery-section py-5">
-        <h2 class="text-center mb-4">Успешные выкупы</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="images/gallery/1.jpg" class="img-fluid rounded" alt="Авто 1">
+      <!-- Калькулятор -->
+      <section id="calculator" class="calculator-section">
+        <h2 class="calculator-title">
+          <span class="calculator-title-highlight">Расчитайте стоимость</span> выкупа online
+        </h2>
+        
+        <div class="calculator-content">
+          <div class="calculator-form">
+            <h3 class="form-title">Какой автомобиль вы хотите продать?</h3>
+            <div class="car-type-selector">
+              <div class="car-type-option">
+                <img src="images/car-types/russian.png" alt="Отечественный автомобиль" class="car-type-image">
+                <span class="car-type-label">Отечественный</span>
+              </div>
+              <div class="car-type-option">
+                <img src="images/car-types/foreign.png" alt="Иномарка" class="car-type-image">
+                <span class="car-type-label">Иномарка</span>
+              </div>
+            </div>
+            <div class="form-navigation">
+              <p class="form-hint">Выберите вариант ответа и нажмите "Далее"</p>
+              <button class="btn-next">Далее</button>
+            </div>
           </div>
-          <div class="col-md-4">
-            <img src="images/gallery/2.jpg" class="img-fluid rounded" alt="Авто 2">
+
+          <div class="manager-card">
+            <div class="manager-info">
+              <img src="images/manager/avatar.png" alt="Илья Кручинин" class="manager-avatar">
+              <div class="manager-details">
+                <h4 class="manager-name">Илья Кручинин</h4>
+                <p class="manager-position">Старший менеджер</p>
+              </div>
+            </div>
+            <div class="manager-message">
+              <p>Ответьте всего на<br>
+              4 вопроса,<br>
+              и получите ориентировочную<br>
+              стоимость выкупа<br>
+              вашего авто</p>
+            </div>
+            <div class="manager-contacts">
+              <a href="tel:+79997779977" class="manager-phone">+7 (999) 777-99-77</a>
+              <div class="manager-social">
+                <a href="https://t.me/your_channel" target="_blank">
+                  <img src="images/tg.png" alt="Telegram" class="social-icon">
+                </a>
+                <a href="https://wa.me/79997779977" target="_blank">
+                  <img src="images/wapp.png" alt="WhatsApp" class="social-icon">
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-            <img src="images/gallery/3.jpg" class="img-fluid rounded" alt="Авто 3">
+        </div>
+      </section>
+
+      <!-- Статистика -->
+      <section id="stats" class="stats-section">
+        <h2 class="stats-title">
+          За прошлый год мы <span class="stats-title-highlight">выкупили авто на 265,3 миллиона</span> рублей
+        </h2>
+        
+        <div class="stats-cards">
+          <div class="stats-card">
+            <h3 class="card-title">Автомобили с пробегом</h3>
+            <p class="card-subtitle">Быстрее, чем продавать самостоятельно</p>
+            <div class="card-image-container">
+              <img src="images/stats/used-car.png" alt="Автомобиль с пробегом" class="card-image">
+              <div class="card-button-container">
+                <button class="card-button">
+                  <div class="button-icon">
+                    <img src="images/icons/Vector.svg" alt="Стрелки" class="arrows-icon">
+                  </div>
+                  <span class="button-text">Рассчитать стоимость</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-card">
+            <h3 class="card-title">Автомобили с пробегом</h3>
+            <p class="card-subtitle">Быстрее, чем продавать самостоятельно</p>
+            <div class="card-image-container">
+              <img src="images/stats/credit-car.png" alt="Автомобиль с пробегом" class="card-image">
+              <div class="card-button-container">
+                <button class="card-button">
+                  <div class="button-icon">
+                    <img src="images/icons/Vector.svg" alt="Стрелки" class="arrows-icon">
+                  </div>
+                  <span class="button-text">Рассчитать стоимость</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-card">
+            <h3 class="card-title">Автомобили с пробегом</h3>
+            <p class="card-subtitle">Быстрее, чем продавать самостоятельно</p>
+            <div class="card-image-container">
+              <img src="images/stats/crash-car.png" alt="Автомобиль с пробегом" class="card-image">
+              <div class="card-button-container">
+                <button class="card-button">
+                  <div class="button-icon">
+                    <img src="images/icons/Vector.svg" alt="Стрелки" class="arrows-icon">
+                  </div>
+                  <span class="button-text">Рассчитать стоимость</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Сравнение -->
+      <section id="comparison" class="comparison-section">
+        <h2 class="comparison-title">
+          продавать авто <span class="comparison-title-highlight">самостоятельно –<br>долго</span> и неудобно
+        </h2>
+        
+        <div class="comparison-content">
+          <div class="comparison-image left">
+            <img src="images/comparison/hourglass.png" alt="Песочные часы" class="comparison-image-bg">
+          </div>
+
+          <div class="comparison-blocks">
+            <div class="comparison-block">
+              <h3 class="block-title">Продажа самостоятельно</h3>
+              <ul class="block-list">
+                <li class="list-item">
+                  <img src="images/icons/cross.svg" alt="Крестик" class="list-icon">
+                  <span>Сроки продажи 1-6 месяцев</span>
+                </li>
+                <li class="list-item">
+                  <img src="images/icons/cross.svg" alt="Крестик" class="list-icon">
+                  <span>Необходимость общения с множеством покупателей</span>
+                </li>
+                <li class="list-item">
+                  <img src="images/icons/cross.svg" alt="Крестик" class="list-icon">
+                  <span>Риск обмана и мошенничества</span>
+                </li>
+                <li class="list-item">
+                  <img src="images/icons/cross.svg" alt="Крестик" class="list-icon">
+                  <span>Торги и снижение цены</span>
+                </li>
+                <li class="list-item">
+                  <img src="images/icons/cross.svg" alt="Крестик" class="list-icon">
+                  <span>Дополнительные расходы на рекламу</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="comparison-block">
+              <h3 class="block-title">С <span class="underlined">нашей</span> помощью</h3>
+              <ul class="block-list">
+                <li class="list-item">
+                  <img src="images/icons/check.svg" alt="Галочка" class="list-icon">
+                  <span>Сроки продажи 1-6 месяцев</span>
+                </li>
+                <li class="list-item">
+                  <img src="images/icons/check.svg" alt="Галочка" class="list-icon">
+                  <span>Необходимость общения с множеством покупателей</span>
+                </li>
+                <li class="list-item">
+                  <img src="images/icons/check.svg" alt="Галочка" class="list-icon">
+                  <span>Риск обмана и мошенничества</span>
+                </li>
+                <li class="list-item">
+                  <img src="images/icons/check.svg" alt="Галочка" class="list-icon">
+                  <span>Торги и снижение цены</span>
+                </li>
+                <li class="list-item">
+                  <img src="images/icons/check.svg" alt="Галочка" class="list-icon">
+                  <span>Дополнительные расходы на рекламу</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="comparison-image right">
+            <img src="images/comparison/money.png" alt="Деньги" class="comparison-image-bg">
           </div>
         </div>
       </section>
