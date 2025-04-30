@@ -18,8 +18,8 @@ body {
 .header {
   position: relative;
   background-color: rgba(232, 232, 232, 0.1); /* Цвет из Figma */
-  margin: 20px auto 0;
-  padding: 24px 50px;
+  margin: 48px auto 0;
+  padding: 32px 60px;
   border-radius: 60px; /* Закругленные углы */
   color: #fff;
   max-width: 1920px;
@@ -73,10 +73,11 @@ body {
 }
 
 .header-text {
-  font-size: 20px; /* Montserrat 24 Regular */
+  font-size: 24px; /* Montserrat 24 Regular */
   font-family: 'Montserrat', sans-serif;
   line-height: 24px;
   font-weight: 200;
+  letter-spacing: 4px;
 }
 
 .header-text-line {
@@ -96,9 +97,14 @@ body {
 }
 
 .header-logo .logo-text {
-  font-size: 24px; /* Bebas Neue 36 */
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
   font-weight: bold;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  display: flex;
+  align-items: center;
+  transform: translateY(0.1em); /* Небольшой сдвиг для визуального выравнивания */
 }
 
 /* Правая часть шапки */
@@ -120,13 +126,16 @@ body {
 }
 
 .social-icon {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   margin-right: 20px;
 }
 
 .contact-info {
   text-align: right;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  line-height: 43px;
 }
 
 .contact-text {
@@ -166,6 +175,8 @@ body {
 
   .header-logo .logo-text {
     font-size: 20px;
+    font-family: 'Bebas Neue Cyrillic', sans-serif;
+    line-height: 29px;
   }
 
   .header-logo .online-status {
@@ -204,7 +215,7 @@ body {
 
 /* Секция баннера */
 .banner-section {
-  padding: 100px 0;
+  padding: 124px 0;
   position: relative;
   color: #fff;
 }
@@ -214,12 +225,24 @@ body {
 }
 
 .banner-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 72px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 62px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 116px;
+  line-height: 130px;
+  color: #FF8A66;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   text-transform: uppercase;
+  
+  margin-left: -8px;
+}
+
+.banner-subtitle-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 92px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #E8E8E8;
+  margin-bottom: 48px;
+  margin-top: 20px; 
 }
 
 .banner-subtitle {
@@ -230,16 +253,17 @@ body {
 }
 
 .loading-dots {
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 16px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .banner-subtitle p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
+  line-height: 32px;
   margin: 0;
 }
 
@@ -248,64 +272,96 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-right: 60px;
 }
 
 .btn-price {
-  background: #FF4D4D;
-  color: #fff;
+  position: relative;
+  width: 31.7266%;
+  background: linear-gradient(to right, #FF8A66, #FFBAA4);
   border: none;
-  padding: 20px 40px;
-  border-radius: 10px;
+  border-radius: 56px;
+  color: #0C0C0C;
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 600;
+  padding: 32px 120px 32px 40px;
   cursor: pointer;
-  transition: background 0.3s ease;
-  white-space: nowrap;
-  flex: 1;
-  text-align: center;
-  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
+}
+
+.btn-price::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 96px;
+  height: 96px;
+  background-color: #0C0C0C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-price::before {
+  content: '';
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 32px;
+  background-image: url('../images/icons/arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
 }
 
 .btn-price:hover {
-  background: #FF3333;  
+  background: linear-gradient(to right, #FFBAA4, #FF8A66);
 }
 
 .banner-stats {
   display: flex;
-  justify-content: space-between;
-  flex: 2;
+  justify-content: flex-end;
   gap: 100px;
 }
 
 .stat-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: end;
   flex: 1;
+  margin-bottom: -76px;
 }
 
 .stat-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 400;
 }
 
 .stat-value {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 64px;
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-size: 72px;
   font-weight: 400;
   text-decoration: underline;
-  line-height: 1;
-  margin: 10px 0;
+  color: #FF8A66;
+  margin: 0 4px 32px;;
+  
 }
 
 .stat-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 28px;
 }
 
 /* Адаптивность для баннера */
@@ -357,14 +413,15 @@ body {
 
 .calculator-title {
   text-align: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 72px;
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-size: 64px;
   font-weight: 400;
   margin-bottom: 60px;
+  text-transform: uppercase;
 }
 
 .calculator-title-highlight {
-  color: #FF4D4D;
+  color: #FF8A66;
 }
 
 .calculator-content {
@@ -521,6 +578,7 @@ body {
 .manager-social .social-icon {
   width: 40px;
   height: 40px;
+  color: #E8E8E8;
 }
 
 /* Адаптивность для калькулятора */
@@ -799,3 +857,99 @@ body {
     font-size: 16px;
   }
 }
+
+/* Секция документов */
+.documents-section {
+  padding: 100px 0;
+  color: #fff;
+}
+
+.documents-title {
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  line-height: 1.2;
+}
+
+.documents-title-highlight {
+  color: #FF4D4D;
+}
+
+.documents-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.document-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.card-image-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.card-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Адаптивность для документов */
+@media (max-width: 1200px) {
+  .documents-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .document-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .documents-title {
+    font-size: 48px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+  }
+}
+
+@font-face {
+  font-family: 'Bebas Neue Cyrillic';
+  src: url('../fonts/BebasNeue-Cyrillic.ttf') format('truetype');
+}
+
+
