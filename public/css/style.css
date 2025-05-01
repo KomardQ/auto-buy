@@ -408,7 +408,7 @@ body {
 /* Секция калькулятора */
 .calculator-section {
   padding: 100px 0;
-  color: #fff;
+  color: #E8E8E8;
 }
 
 .calculator-title {
@@ -428,16 +428,12 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 60px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
 .calculator-form {
+  max-width: 53.5%;
   flex: 1;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
 }
 
 .form-title {
@@ -445,19 +441,16 @@ body {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 40px;
-  text-align: center;
 }
 
 .car-type-selector {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .car-type-option {
-  flex: 1;
-  text-align: center;
+  width: 40%;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -468,15 +461,14 @@ body {
 
 .car-type-image {
   width: 100%;
-  max-width: 200px;
   height: auto;
   margin-bottom: 20px;
 }
 
 .car-type-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 200;
 }
 
 .form-navigation {
@@ -485,20 +477,20 @@ body {
 
 .form-hint {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
   margin-bottom: 20px;
+  font-weight: 200;
 }
 
 .btn-next {
-  background: #FF4D4D;
-  color: #fff;
+  background: linear-gradient(to right, #FF8A66, #FFBAA4);
+  color: #0C0C0C;
   border: none;
-  padding: 15px 40px;
-  border-radius: 10px;
+  padding: 24px 158px;
+  border-radius: 56px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 400;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -509,20 +501,23 @@ body {
 
 /* Карточка менеджера */
 .manager-card {
-  width: 400px;
-  background: rgba(255, 255, 255, 0.1);
+  max-width: 30%;
+  width: 100%;
+  background: rgba(46, 31, 27, 0.8);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 56px;
   padding: 40px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .manager-info {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .manager-avatar {
@@ -538,40 +533,43 @@ body {
 
 .manager-name {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 
 .manager-position {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 24px;
+  font-weight: 200;
 }
 
 .manager-message {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
-  line-height: 1.4;
+  line-height: 1.33;
   margin-bottom: 40px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .manager-contacts {
   margin-top: auto;
+  text-align: center;
 }
 
 .manager-phone {
   display: block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: #E8E8E8;
   text-decoration: none;
   margin-bottom: 20px;
 }
 
 .manager-social {
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -612,70 +610,73 @@ body {
 /* Секция статистики */
 .stats-section {
   padding: 100px 0;
-  color: #fff;
+  color: #E8E8E8;
 }
 
 .stats-title {
   text-align: center;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  text-transform: uppercase;
   font-size: 72px;
   font-weight: 400;
   margin-bottom: 80px;
 }
 
 .stats-title-highlight {
-  color: #FF4D4D;
+  color: #FF8A66;
 }
 
 .stats-cards {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 85px;
 }
 
 .stats-card {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.1);
+  width: 29%;
+  background: rgba(46, 31, 27, 0.8);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
+  border-radius: 56px;
   position: relative;
-  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .card-title {
   font-family: 'Montserrat', sans-serif;
+  line-height: 32px;
   font-size: 24px;
   font-weight: 600;
+  margin-top: 40px;
   margin-bottom: 10px;
 }
 
-.card-subtitle {
+.stats-card .card-subtitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: 200;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 30px;
 }
 
-.card-image-container {
-  position: relative;
+.stats-card .card-image-container {
   margin-top: 30px;
 }
 
-.card-image {
-  width: 100%;
+.stats-card .card-image {
+  width: 110%;
   height: auto;
   display: block;
 }
 
 .card-button-container {
+  width: 100%;
   position: absolute;
-  top: -30px;
-  left: 50%;
+  bottom: -98px;
+  left: 60%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 10;
 }
 
 .card-button {
@@ -691,25 +692,25 @@ body {
 .button-icon {
   width: 80px;
   height: 80px;
-  background: #FF4D4D;
+  background: #FF8A66;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .arrows-icon {
-  width: 40px;
-  height: 40px;
+  width: 31px;
+  height: 31px;
 }
 
 .button-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 200;
   text-decoration: underline;
-  color: #fff;
+  color: #FF8A66;
 }
 
 /* Адаптивность для статистики */
@@ -904,12 +905,12 @@ body {
   margin-bottom: 30px;
 }
 
-.card-image-container {
+.document-card .card-image-container {
   width: 100%;
   margin-bottom: 30px;
 }
 
-.card-image {
+.document-card .card-image {
   width: 100%;
   height: auto;
   max-width: 200px;
@@ -917,7 +918,7 @@ body {
   display: block;
 }
 
-.card-subtitle {
+.document-card .card-subtitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
