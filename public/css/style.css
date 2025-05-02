@@ -33,11 +33,16 @@ body {
   top: 0;
   right: 0;
   z-index: -1;
+  width: 100%;
+  max-width: 1190px;
+  height: auto;
 }
 
 .background-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  object-fit: contain;
+  
 }
 
 /* Основные секции */
@@ -641,9 +646,10 @@ body {
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #E8E8E8;
 }
 
-.card-title {
+.stats-card .card-title {
   font-family: 'Montserrat', sans-serif;
   line-height: 32px;
   font-size: 24px;
@@ -673,7 +679,7 @@ body {
 .card-button-container {
   width: 100%;
   position: absolute;
-  bottom: -98px;
+  bottom: -116px;
   left: 60%;
   transform: translateX(-50%);
   z-index: 10;
@@ -734,7 +740,7 @@ body {
 
 /* Секция сравнения */
 .comparison-section {
-  padding: 100px 0;
+  padding: 230px 0;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -742,15 +748,15 @@ body {
 
 .comparison-title {
   text-align: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 72px;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  font-size: 64px;
   font-weight: 400;
   margin-bottom: 80px;
-  line-height: 1.2;
 }
 
 .comparison-title-highlight {
-  color: #FF4D4D;
+  color: #FF8A66;
 }
 
 .comparison-content {
@@ -771,19 +777,23 @@ body {
 
 .comparison-block {
   flex: 1;
-  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 56px;
   padding: 40px;
   position: relative;
   z-index: 1;
+  background: rgba(46, 31, 27, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .block-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 30px;
+  font-weight: bold;
+  line-height: 32px;
+  color: #FF8A66;
+  margin-bottom: 54px;
   text-align: center;
 }
 
@@ -795,42 +805,40 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: 38px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
 }
 
 .list-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 40px;
+  margin-bottom: 40px;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
 }
 
 .list-icon {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   flex-shrink: 0;
 }
 
 .comparison-image {
   position: absolute;
-  bottom: -100px;
   z-index: 0;
 }
 
 .comparison-image.left {
-  left: -100px;
+  left: -180px;
+  bottom: -40px;
 }
 
 .comparison-image.right {
-  right: -100px;
-}
-
-.comparison-image-bg {
-  width: 300px;
-  height: auto;
-  filter: blur(5px);
-  opacity: 0.7;
+  right: -122px;
+  bottom: 38px;
 }
 
 /* Адаптивность для сравнения */
@@ -867,62 +875,101 @@ body {
 
 .documents-title {
   text-align: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 72px;
+  font-family: 'Bebas Neue Cyrillic', sans-serif;
+  text-transform: uppercase;
+  font-size: 64px;
   font-weight: 400;
   margin-bottom: 80px;
   line-height: 1.2;
 }
 
 .documents-title-highlight {
-  color: #FF4D4D;
+  color: #FF8A66;
 }
 
 .documents-cards {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
 .document-card {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.1);
+  width: 26%;
+  background: rgba(46, 31, 27, 0.8);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
+  border-radius: 56px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.card-title {
+.document-card:first-child .card-image-container {
+  margin-top: 33px;
+}
+
+.document-card .card-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 40px 0;
+  line-height: 32px;
+  color: #FF8A66;
 }
 
 .document-card .card-image-container {
   width: 100%;
   margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.document-card .card-image-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(255, 100, 50, 0.6) 0%, rgba(0, 0, 0, 0) 80%);
+  animation: pulseGlow 5s infinite cubic-bezier(0.65, 0, 0.35, 1); /* Анимация для пульсирующего свечения */
+  filter: blur(40px);
+  z-index: 0;
 }
 
 .document-card .card-image {
   width: 100%;
   height: auto;
+  position: relative;
   max-width: 200px;
   margin: 0 auto;
   display: block;
+  z-index: 10;
+  border-radius: 8px;
+}
+
+@keyframes pulseGlow { /* Анимация для пульсирующего свечения */
+  0%, 100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
 }
 
 .document-card .card-subtitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 32px;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 /* Адаптивность для документов */
@@ -945,6 +992,65 @@ body {
   
   .card-title {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1919px) {
+  .background-image {
+    max-width: 66%;
+  }
+
+  .header {
+    padding: 24px 40px;
+  }
+
+  .header-text {
+    font-size: 16px;
+  }
+
+  .contact-number  {
+    font-size: 20px;
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header-logo .logo {
+    max-width: 32px;
+  }
+
+  .header-logo .logo-text {
+    font-size: 32px;
+  }
+
+  .btn-price {
+    padding: 24px 60px 24px 30px;
+    font-size: 12px;
+    width: auto; /* убираем фиксированный % */
+    white-space: nowrap;
+  }
+
+  .btn-price::after {
+    width: 72px;
+    height: 72px;
+  }
+
+  .btn-price::before {
+    right: 32px;
+  }
+
+  .banner-title {
+    font-size: 72px;
+  }
+
+  .banner-subtitle-text {
+    font-size: 48px;
+  }
+
+  .banner-actions {
+    gap: 32px;
   }
 }
 
